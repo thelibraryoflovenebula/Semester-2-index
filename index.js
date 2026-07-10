@@ -27,6 +27,20 @@ let ass3 = function ass3() {
     outputframe.innerHTML = "<iframe src='assignments/a3/index.html'></iframe>";
 }
 
+/* USE THIS TEMPLATE TO MAKE A NEW ELEMENT AND FUNCTION 
+
+//assignment 3 typeshit
+let ass3button = document.getElementById("a3tab");
+let ass3 = function ass3() {
+    outputframe.innerHTML = "<iframe src='assignments/a3/index.html'></iframe>";
+}
+*/
+
+
+
+
+
+
 //github typeshit
 let githubbutton = document.getElementById("githubtab");
 let github = function github() {
@@ -61,6 +75,9 @@ let openhtml = function openhtml() {
 ass1button.addEventListener("click", ass1);
 ass2button.addEventListener("click", ass2);
 ass3button.addEventListener("click", ass3);
+//MAKE NEW EVENTLISTENERS USING THIS ass3button.addEventListener("click", ass3);
+
+
 //githubbutton.addEventListener("click", github); // okay so it turns out im pretty sure github turned off iframe 
 artbutton.addEventListener("click", art)
 openhtmlbutton.addEventListener("click", openhtml)

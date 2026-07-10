@@ -1,0 +1,165 @@
+
+body {
+    background-image: url(images/as.jpg); 
+    color: rgb(219, 171, 171);
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: rgb(149, 83, 83);
+    background-image: url(images/sky2.jpg);
+    padding: 2em 0;
+    border-bottom: 4px solid rgb(141, 84, 84);
+}
+
+.bruh {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+footer {
+    border-top: 5px solid rgb(141, 84, 84);
+}
+
+.titl {
+    text-shadow: 10px 10px white;
+    font-size: 500%;
+}
+.title {
+    font-size: 250%;
+}
+
+.title, .titl {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.strawb {
+    width: 100px;
+}
+
+.accordion, .accordion-button{
+    color: rgb(219, 171, 171);
+    background-image: url(images/sky2.jpg);
+}
+
+.accordion-item {
+    color:  rgb(221, 140, 140);
+}
+
+/* hover */
+.accordion-button:hover, .accordion-button:not(.collapsed) {
+    background-color: #4e3340;
+    color: rgb(235, 202, 202);
+}
+
+/* remove ugly Bootstrap blue glow */
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: transparent;
+    color: rgb(126, 61, 61);
+}
+
+
+.btn-primary {
+    background-image: url(images/sky2.jpg);
+    border: none;
+    color: rgb(235, 202, 202);
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+    background-image: url(images/sky2.jpg);
+    box-shadow: none !important; /* this removes the ugly ass blue glow*/
+    border-color: transparent;
+    color: rgb(126, 61, 61);
+}
+
+.navbar-brand {
+    background-image: url(images/sky2.jpg);
+    color: rgb(219, 171, 171);
+    padding: 5px;
+    font-size: 95%;
+    border-radius: 10px;
+}
+
+.navbar-brand:hover {
+    color: rgb(219, 171, 171);
+    background-color: #4e3340;
+}
+
+.nav-link, .dropdown-menu {
+    color: #b598a6;;
+}
+
+
+main {
+    margin: 2em 10em 10em 10em;
+}
+
+.questionbox, .questionbox2 {
+    border: 5px solid  #9f7272;
+    border-radius: 1em;
+    background-color: white;
+    padding: 1em;
+}
+
+.questionbox2 {
+    text-align: center;
+}
+
+.grouptitle {
+    text-align: center;
+    color: rgb(159, 117, 117);
+    margin: 0 0 0.5em 0;
+    font-size: 300%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.extra {
+    color: rgb(159, 117, 117);
+    margin: 0 0 0.5em 0;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nextbox {
+    display: flex;
+    justify-self: center;
+    width: fit-content;
+    border: 5px solid  #c28d8d;
+    border-radius: 3em;
+    background-color: white;
+    padding: 1em 1em 0 1em;
+    margin: 3em;
+}
+
+
+
+.form-check-input:checked, .form-check-input:after, .form-check-input:link{
+    background-color: rgb(159, 117, 117);
+    border-color: rgb(159, 117, 117);
+    box-shadow: none !important; /* this removes the ugly ass blue glow*/
+}
+
+.form-check-input:focus {
+    border-color: rgb(159, 117, 117);;
+    box-shadow: 0 0 5px rgb(159, 117, 117);
+}
+
+.bruh2 {
+    text-decoration: none;
+    color: rgb(149, 83, 83);
+
+}
+
+.bruh2:hover {
+    text-decoration: none;
+    color: rgb(239, 209, 194);
+}
+

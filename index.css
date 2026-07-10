@@ -1,0 +1,107 @@
+#facediv { /* THIS IS THE FACE PART*/
+    justify-content: right;
+    align-items: end;
+    text-align: right;
+}
+
+#titlediv { /* THIS IS THE TITLE PART*/
+    padding-top: 3em;
+    justify-content: left;
+    align-items: start;
+    text-align: left;
+}
+
+.toptitle {
+    font-size: 550%;
+    color: rgb(243, 246, 226);
+    font-family: Brush Script;
+    text-shadow: 4px 6px rgb(88, 67, 67);
+}
+
+.bottomtitle {
+    color: rgb(88, 67, 67);
+    font-family: Brush Script;
+}
+
+
+
+
+
+header, footer {
+    text-align:center;
+    padding: 0 0 6em 0;
+}
+
+
+header {
+  height: 300px;
+  background: url("pics/heade.png");
+  background-size: 50% autp;
+  background-position: center -200px;
+  position: relative;
+  z-index: 2;
+}
+
+/*  THIS IS FOR THE LITTLE RIBBON STRIP */
+#border {
+    height: 7em;
+    margin-bottom: auto;
+    background-image: url("pics/split2.png");
+    z-index: 5;
+}
+
+main {
+  min-height: 100vh;
+  background: url("pics/hed.png") center/cover ;
+  background-size: 40% auto;
+  padding-top: 10px; /* prevents content from being hidden */
+  position: relative;
+  z-index: 0;
+}
+
+footer {
+    background: url("pics/hed.png") center/cover ;
+    background-size: 40% auto;
+    padding-top: 10em;
+}
+
+
+/* MY ACTUAL BUTTON STYLING */
+
+#myTab {
+    background-color: rgba(57, 19, 19, 0.59);
+}
+
+#a1tab, #a2tab, #a3tab, #arttab, #githubtab, #htmltab {
+    background-color: rgb(251, 255, 207);
+    color: rgb(56, 8, 8);
+    border: 2px solid black;
+}
+
+
+
+#gitref {
+    text-decoration: none;
+    color: rgb(56, 8, 8);
+}
+
+
+
+iframe {
+    height: 100em;
+    width: 100%;
+}
+
+.outputframe{
+    width: max-content;
+    height: 200em;
+}
+
+iframe, .outputframe {
+    border-radius: 5em;
+    border: 20px solid rgb(255, 255, 255);
+    background-color: white;
+    box-shadow: 10px 10px 5px rgb(252, 253, 244);
+    padding: 20px pink;
+}
+

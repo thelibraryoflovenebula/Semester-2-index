@@ -1,4 +1,5 @@
 <h1>Semester 2 index</h1>
+<a href="https://thelibraryoflovenebula.github.io/Semester-2-index/"> URL</a>
 
 This is for me to keep up with, has my current semester workings, someone could probably dox the shit out of me if they scoured the internet long and hard enough... oh well
 

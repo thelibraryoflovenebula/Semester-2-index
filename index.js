@@ -84,4 +84,4 @@ openhtmlbutton.addEventListener("click", openhtml)
 
 
 // if you want a specific one to be default write this at the VERY FUCKING END PATRICK 
-art();
+ass3();

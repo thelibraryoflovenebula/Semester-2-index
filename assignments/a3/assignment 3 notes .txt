@@ -1,0 +1,13 @@
+REQUIREMENTS: 
+1. When page loads, show three random images
+
+	
+user can: 
+	- click images
+	- press a randomize button
+	- wait for a countdown timer to automatically change the images
+
+- Store image file names in 3x3 2d array
+
+
+	

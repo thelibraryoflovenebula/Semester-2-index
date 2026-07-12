@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ASSIGNMENT 3 </title>
+
+       
+        
+        <!-- MY JS FILE -->       <script src="index.js" defer></script>
+        <!-- BOOTSTRAP CSS-->     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- for the confetti-->  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+        <!-- MY CSS FILE-->       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+        
+        <header>
+
+            <img src="pics/m2.png" alt="ribbon" class="rightthing" id="left">
+            <div><h1 id="titleThing"> ˖Assignment :3</h1> <p id="underThing"> JavaScript Image Randomizer * COMP 10259  </p></div>
+            <img src="pics/m2.png" alt="ribbon" class="rightthing" id="right">
+
+        </header>
+
+
+        <div id="ribbon">
+
+        </div>
+
+        <main>
+
+            <div class="row firstR"> <!-- ROW 1-->
+                <!-- THIS IS FOR RANDOMIZING ALL -->
+                <div class="col" style="justify-content: center; text-align: center;">
+                    <div> 
+                        <button type="button" id="randomAll"> Randomize </button>
+                        <label for="randomAll"> Click to change all</label>
+                    </div>
+                    <div id="totalCount" class="outword">
+                        <h5>Total clicked: </h5> <h5 id="total"> </h5>
+                    </div>
+                </div>
+
+
+
+                <!-- THIS IS FOR THE TIMER -->
+                <div class="col" style="justify-content: center; text-align: center;">
+                    <div id="timerShow"> 
+                    
+                    </div>
+                    <div id="showMax">
+
+                    </div>
+                </div>
+
+
+                <!-- THIS IS FOR ENTERING NEW REFRESH TIME -->
+                <div class="col">
+                    <label for="submitTime"> Enter 500ms-10,000ms for new refresh time</label> <br>
+                    <button type="button" id="submitTime"> Update </button>
+                    <input type="text" id="enterTime"> <br>
+                    <p id="valid"></p>
+                    
+
+
+                </div>
+            </div>      <!-- ROW 1 -->
+
+
+
+
+            <div class="row secondR"> <!-- ROW 2-->
+
+                <!-- FOR LILY -->
+                <div class="col clicks">
+                    <button type="button" id="lilyClick" class="buttonshi"> 
+                        <img src="" alt="LILY ^_^" id="lilyCol" class="imageshi">
+                    </button>
+                    <p> this is my beloved lily :p </p>
+                    <div class="outword"><h5>Clicked: &nbsp;</h5><h5 id="lilyCount"></h5></div>
+                    
+                </div>
+
+
+
+                <!-- FOR BASQUIAT-->
+                <div class="col clicks">
+                    <button type="button" id="basClick" class="buttonshi"> 
+                        <img src="" alt="Painter :0" id="basCol" class="imageshi">
+                    </button>
+                    <p>this is my favourite painter</p>
+                    <div class="outword"><h5>Clicked: &nbsp;</h5><h5 id="basCount"> </h5> </div>
+                </div>
+                    
+
+
+
+                <!-- FOR JASMINE -->
+                <div class="col clicks">
+                    <button type="button" id="jasClick" class="buttonshi"> 
+                        <img src="" alt="Beb" id="jasCol" class="imageshi">
+                    </button>
+                    <p> this is my favourite person</p>
+                    <div class="outword"><h5>Clicked: &nbsp;</h5><h5 id="jasCount"> </h5></div>
+                </div>
+
+            </div>      <!-- ROW 2 -->
+
+
+            <div class="row thirdR"> <!-- ROW 3-->
+                <div class="col">
+                    <div class="winDiv outword">
+                        <h1> Wins: &nbsp; </h1><h1 id="winCount"> </h1>
+                    </div>
+                </div>
+            </div>      <!-- ROW 3-->
+
+            
+        </main>
+
+        <canvas id="confetti"> </canvas>
+
+
+        <footer>
+            <h1>Information</h1>
+            <p> hi so each image spins when you click it <br> uhm... image refreshes by the current refresh rate you give it</p>
+            <p> also i added a game where. if you match all three you "win" ^_^</p>
+            <p> Neil Patrick, 000964569, @2026</p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,169 @@
+.col {
+    text-align: center;
+    margin: 5px;
+}
+
+#lilyCol, #basCol, #jasCol {
+    height: 200px;
+}
+
+
+#confetti {
+    height: 0;
+    width: 0;
+}
+
+main, footer {
+    margin: 2em 0 2em 0;
+}
+
+header{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+footer {
+    margin-top: 5em;
+    text-align: center;
+}
+
+button {
+    border: none;
+}
+
+#winDiv {
+    font-size: 2em;
+    margin: 10em;
+}
+
+.errorText {
+    color: red;
+}
+
+.goodText {
+    color: green;
+}
+
+#timerShow {
+    font-size: 6em;
+    border-radius: 1em;
+    padding: 0;
+}
+
+.phase1 {
+    color: white;
+    background-color: rgb(194, 247, 114);
+}
+
+.phase2 {
+    color: rgb(73, 73, 73);
+    background-color: rgb(251, 251, 159);
+}
+
+.phase3 {
+    color: white;
+    background-color: rgb(255, 164, 164);
+}
+
+
+
+/*DECORATIONNNNNN*/
+
+
+main {
+    background-image: url("pics/blue2.jpeg");
+    border-radius: 5em;
+    border: 5px solid rgb(190, 205, 210);
+    margin: 100px;
+}
+
+.clicks {
+    background-image: url("pics/blue.jpeg");
+    border: 5px solid lightblue;
+    border-radius: 2em;
+    padding: 2em;
+    margin: 10px;
+}
+
+.buttonshi, .imageshi {
+    border-radius: 20em;
+}
+
+body{
+    background-image: url("pics/bodyblue.jpeg");
+    color: rgb(130, 137, 155);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    height: 300px;
+    background-image: url("pics/blue.jpeg");
+}
+
+footer {
+    background-image: url("pics/footerblue.png");
+}
+
+#ribbon {
+    z-index: 5;
+    background-image: url("pics/rick2b.png");
+    height: 200px;
+    margin-top: -132px;
+    margin-bottom: -50px;
+
+}
+
+#titleThing {
+    padding-top: 50px;
+    font-size: 6em;
+    color: white;
+    text-shadow: 3px 5px rgb(130, 127, 152);
+}
+
+#underThing {
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px rgb(97, 100, 116);
+}
+
+#titleThing, #underThing {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#leftthing {
+    height: 100px;
+
+}
+.rightthing {
+    height: 200px;
+}
+
+button {
+    background-color: lightblue;
+    color: rgb(233, 247, 255);
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+button:hover {
+    background-color: rgb(116, 146, 156);
+
+}
+
+.outword {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left:hover, #right:hover {
+    transform: rotate(360deg);
+    transition: 1s ease;
+}

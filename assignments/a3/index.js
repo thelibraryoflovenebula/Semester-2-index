@@ -1,3 +1,14 @@
+/*
+Name: Neil Patrick Olaires, 000964569
+Assignment 3: JavaScript Image Randomizer
+This randomizes the image, and ive added a little bonus game in where
+if you make all of the images the same it will count as a win
+
+to run, just open the html
+*/
+
+
+
 //INPUTS
     const canvas = document.querySelector("#confetti");
     const jsConfetti = new JSConfetti(); //jsConfetti.addConfetti();
@@ -45,6 +56,9 @@
     //ARRAY FOR PICTURES
     const pic = [["1LILY/lily1.png", "1LILY/lily2.png", "1LILY/lily3.png"], ["2BASQ/jean.png", "2BASQ/jean2.png", "2BASQ/jean3.png"], ["3JASMINE/angry.png", "3JASMINE/sad.png", "3JASMINE/sulk.png"]];
 
+    /**This function updates the total counter, and is called for every count up 
+     *  its stored as "updateTotal()" and then outputs onto html
+     */
     let updateTotal = function update() {
         totalCounter = lilyCounter + basCounter + jasCounter;
         totalCountOut.innerHTML = totalCounter;
@@ -52,14 +66,27 @@
 
 
 //INPUT VALIDATION 
-let damn = "Max time: " + refreshTimer + "ms";
-showMax.innerHTML = damn;
 
-    let outputMax = function showThing() {
-        showMax.innerHTML = "Max time: " + refreshTimer;
-    }
+let damn = "Max time: " + refreshTimer + "ms"; // this just stores the string format
+showMax.innerHTML = damn; //then outputs it
+
+//this shows what the established refresh timer is (its defaulted to 7 seconds but should update throughout whenever user changes it )
+let outputMax = function showThing() {
+    showMax.innerHTML = "Max time: " + refreshTimer;
+}
 
 
+
+/**This function validates user input 
+ * @param {Number} enterTime - this is what the user inputs into the input text box and submits
+ * @param {String}  error - stores error message -> with css
+ * @param {String} validated - stores a validated message ->with css
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 let validater = function val() {
 
     let enterTime = Number(document.getElementById("enterTime").value); //refresh time input
@@ -67,16 +94,17 @@ let validater = function val() {
     let error = "Please enter correct input";
     let validated = "Done!"
 
-    if (Number.isInteger(enterTime)) {
-        if (enterTime >= 500 && enterTime <= 10000) {
+    if (Number.isInteger(enterTime)) { //CONDITION 1: IS THE INPUT ACTUALLY AN INTEGER????
+        if (enterTime >= 500 && enterTime <= 10000) {//if yes CONDITION 2: IS THE NUMBER WITHIN RANGE?
+            //if yes validate and enter new refreshTimer as entered input
             validate.innerHTML = validated;
             validate.className = "goodText";
             refreshTimer = enterTime;
 
-            resetT(); //reset if everything is in order
-            outputMax();
+            resetT(); //reset time if everything is in order
+            outputMax(); //outputs the new refresh timer (underneath the timer)
         }
-        else {
+        else {//IF IT IS NOT IN RANGE
             validate.innerHTML = error;
             validate.className = "errorText"
         }
@@ -91,7 +119,7 @@ let validater = function val() {
 
 
 
-
+//this calls the validator function everytime the submit button is clicked
 timeButton.addEventListener("click", validater);
 
 
@@ -161,25 +189,28 @@ timeButton.addEventListener("click", validater);
 //CLICK  and CHANGE FUNCTIONS
     //check first 
 
+    // this function counts wins by adding it onto the html and adding 1 to the win counter =
     let addwin = function add(win) {
         winCounting += win;
         winOut.innerHTML = winCounting;
 
     }
 
+    //megawin happens when you get a win from only clicking "randomize"
     let checkMegaWin = function check2() {
         if ((lilyCol.src == basCol.src) && (basCol.src == jasCol.src)) {
             megaWin = true;
-            jsConfetti.addConfetti({
+            jsConfetti.addConfetti({ //OKAY DONT KILL ME BUT THIS FUNCTION I FOUND ONLINE, I HAVE THE LINK RIGHT HERE AND YOUTUBE TUTORIAL FOR IT:  https://www.youtube.com/watch?v=tTIaA1Xmzmg&t=365s
                 confettiRadius: 6,
                 confettiNumber: 500,
                 emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-            });
+            }); //this just customizes the confetti
             addwin(3);
         }
 
     }
 
+    //this is a standard win 
     let checkwin = function check() {
         if (megaWin == true) {
             return;
@@ -187,18 +218,34 @@ timeButton.addEventListener("click", validater);
 
         if ((lilyCol.src == basCol.src) && (basCol.src == jasCol.src)) {
             jsConfetti.addConfetti({
-                confettiRadius: 5,
+                confettiRadius: 5, //smaller but hey does the job
                 confettiNumber: 1000,
                 
             });
-            addwin(1);
+            addwin(1); //win counter
         }
     }
 
 
 
 
+    /*
+    okay so here, i hope to explain just both the change and click function for ALL three of them
 
+    CHANGE
+    1. this randomly generates a number for both array index's column/row
+    2. assigns the rng into the array pic[][] to choose out of 9
+    3. does styling stuff
+
+    CLICK
+    1. calls click function
+    2. counts up counter and pastes current counter back into html
+    3. updates total counter
+    4. resets the refresh timer
+    5. checks if the next generated is a win condition
+
+
+    */
     //LILY 
     let changeLily = function change1() {
         let randomTemp1 = Math.floor(Math.random()*3);
@@ -268,20 +315,24 @@ timeButton.addEventListener("click", validater);
 
 //AUTOMATIC REFRESH TIMER
 
+    //this stores what to refresh for future use when timer is finished
     let refresh = function refreshImage() {
         changeLily();
         changeBas();
         changeJas();
-
-
     }
+
+
+    //this is FOR THE randomizer button, calls change functions and counts up
+    // I wanted to just call the click function but i wanted the randomize button 
+    // to check for a megaWin() condition
+    //if its not megawin it will just call the normal win condition , if it is a megawin it will call that
 
     let randomize = function random() {
 
     changeLily();
     changeBas();
     changeJas();
-
     lilyCounter++;
     basCounter++;
     jasCounter++;
@@ -303,6 +354,8 @@ timeButton.addEventListener("click", validater);
 
 //timer
 //SETUP
+
+    //initialize stuff first
     let outputClock = document.getElementById("timerShow");
     let currentMil = 0;
     let currentSec = 0;
@@ -310,6 +363,16 @@ timeButton.addEventListener("click", validater);
     //get 4 points (calculate for 2)
     outputClock.className = "phase1";//start
 
+
+    //I PUT THIS FUNCTION EARLIER BECAUSE OF PRESCENDENCY or order of importance 
+    /**First it cuts the refresh timer and 
+     * initilizes all the important points
+     * A, B, C, D -> this is important for our critical points when making the timer change css property
+     * 
+     * a parameter that is important here is currentMil, which goes up
+     * and this function is ALWAYS CALLED for every single new updateClock()
+     * 
+     */
     let changeColor = function() {
         let phaseLength = refreshTimer / 3;
         let pointA = 0;
@@ -331,6 +394,16 @@ timeButton.addEventListener("click", validater);
     }
 
 
+    //THIS FUNCTION IS THE CREM DE LA CREM 
+    /**
+     * 
+     * @param {*} refreshTimerV - this is just used for local variable but the only input here realistically is the user input
+     * 1. initilaize the max seconds and max mil (for timer visibility) this also does some Math
+     * 2. update the currentMil [NOTE: currentMil doesnt change to fit visibility, this is the only real counter since its kept untouched and is used for EVERYTHING]
+     * 3. initialize and condition the showable integers, make reset at max second and max mil and display with only the tenths
+     * 4. output onto html
+     * 5. also change color function to check if the new currentMil hit a critical point
+     */
     let updateClock = function updateClockshi(refreshTimerV){
         let maxSec = Math.floor(refreshTimerV / 1000); //A 
         let maxMil =  refreshTimerV - (maxSec*1000) //BCD 
@@ -353,16 +426,31 @@ timeButton.addEventListener("click", validater);
         
         changeColor();
     }  
+
+    //this is weird but i had to do this to make the parameter work so this is kind of a crutch
     let updateClockTimer = function () {
         updateClock(refreshTimer);
     }
 
 
     //RESET FUNCTIONS 
+    /**
+     * This function is used in every refresh, or click touch
+     * sets the current mil and sec to 0 (though currentSec isn't really used much in this program )
+     */
     let resetClock = function resetClockshi() {
         currentMil = 0;
         currentSec = 0;
     }
+
+    /**
+     * These two functions are really imortant
+     * FIRST is stored in variable to be used for clearInterval
+     * SECOND is resetT which is the ACTUAL USED reset timer function for clicks, randomize, refresh
+     *      - calls clearInterval for the user input (refreshTimer)
+     *      - calls the resetClock which resets the currentMil timer
+     *      - also refreshing is called again but its important to ACTUALLY get it back running again after clearing
+     */     
     let refreshing = setInterval(refresh, refreshTimer);
     let resetT = function reset() {
         clearInterval(refreshing);
@@ -370,25 +458,16 @@ timeButton.addEventListener("click", validater);
         resetClock();
     }
 
-
-
-//VISUAL
+    //IMPORTANT FOR THE VERY START
     setInterval(updateClockTimer, 100);
-    outputClock.innerHTML = "0.0";
-
-    let celebrate = function cel() {
-
-    }
+    outputClock.innerHTML = "0.0"; //set to zero
 
 
 
 
 
 
-
-
-
-
+//on startup, it randomly chooses between the sets of pictures
 chooseLily();
 chooseBas();
 chooseJas();
@@ -413,7 +492,8 @@ chooseJas();
 
 
 
-//EVENT HANDLERS AT THE VERY BOTTOM
+//EVENT HANDLERS AT THE VERY BOTTOM and the buttons
+//too simple that i feel lazy explaining
 lilyButton.addEventListener("click", clickLily);
 lilyCountOut.innerHTML = lilyCounter;
 

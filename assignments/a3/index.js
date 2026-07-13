@@ -238,6 +238,7 @@ timeButton.addEventListener("click", validater);
     3. does styling stuff
 
     CLICK
+    0. resets the megaWin boolean so that it doesnt bug out
     1. calls click function
     2. counts up counter and pastes current counter back into html
     3. updates total counter
@@ -257,6 +258,9 @@ timeButton.addEventListener("click", validater);
         lilyCol.style.transform = "rotate(" + lilyRotate + "deg)";
     }
     let clickLily = function click1() {
+        megaWin = false;//makes sure to reset it to false after a win
+
+
         changeLily();
         lilyCounter++;
         lilyCountOut.innerHTML = lilyCounter;
@@ -279,6 +283,7 @@ timeButton.addEventListener("click", validater);
         basCol.style.transform = "rotate(" + basRotate + "deg)";
     }
     let clickBas = function click2() {
+        megaWin = false;//makes sure to reset it to false after a win
         changeBas();
 
         basCounter++;
@@ -300,6 +305,7 @@ timeButton.addEventListener("click", validater);
         jasCol.style.transform = "rotate(" + jasRotate + "deg)";
     }
     let clickJas = function click3() {
+        megaWin = false;//makes sure to reset it to false after a win
         changeJas();
 
         jasCounter++;
@@ -329,6 +335,7 @@ timeButton.addEventListener("click", validater);
     //if its not megawin it will just call the normal win condition , if it is a megawin it will call that
 
     let randomize = function random() {
+    megaWin = false; //makes sure to reset it to false after a win
 
     changeLily();
     changeBas();

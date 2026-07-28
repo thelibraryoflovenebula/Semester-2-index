@@ -72,10 +72,16 @@ footer {
     background-color: rgba(57, 19, 19, 0.59);
 }
 
-#a1tab, #a2tab, #a3tab, #arttab, #githubtab, #htmltab {
+.tabby, .tabby:visited, .tabby::after {
     background-color: rgb(251, 255, 207);
-    color: rgb(56, 8, 8);
-    border: 2px solid black;
+    color: rgb(56, 8, 8) !important;
+    border: 2px solid rgb(62, 62, 62);
+}
+
+
+.tabby:hover {
+    background-color: rgb(242, 226, 177);
+    color: rgb(158, 125, 125);
 }
 
 

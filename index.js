@@ -27,6 +27,15 @@ let ass3 = function ass3() {
     outputframe.innerHTML = "<iframe src='assignments/a3/index.html'></iframe>";
 }
 
+//assignment 4 typeshit
+let ass4button = document.getElementById("a4tab");
+let ass4 = function ass4() {
+    outputframe.innerHTML = "<iframe src='assignments/a4/index.html'></iframe>";
+}
+
+
+
+
 /* USE THIS TEMPLATE TO MAKE A NEW ELEMENT AND FUNCTION 
 
 //assignment 3 typeshit
@@ -65,6 +74,13 @@ let openhtml = function openhtml() {
 }
 
 
+//html opener
+let backbutton = document.getElementById("backtab");
+let backhtml = function back() {
+    window.location.href = "../index.html";
+}
+
+
 
 
 
@@ -75,13 +91,15 @@ let openhtml = function openhtml() {
 ass1button.addEventListener("click", ass1);
 ass2button.addEventListener("click", ass2);
 ass3button.addEventListener("click", ass3);
+ass4button.addEventListener("click", ass4);
 //MAKE NEW EVENTLISTENERS USING THIS ass3button.addEventListener("click", ass3);
 
 
 //githubbutton.addEventListener("click", github); // okay so it turns out im pretty sure github turned off iframe 
-artbutton.addEventListener("click", art)
-openhtmlbutton.addEventListener("click", openhtml)
+artbutton.addEventListener("click", art);
+openhtmlbutton.addEventListener("click", openhtml);
+backbutton.addEventListener("click", backhtml);
 
 
 // if you want a specific one to be default write this at the VERY FUCKING END PATRICK 
-ass3();
+ass4();

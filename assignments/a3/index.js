@@ -202,7 +202,7 @@ timeButton.addEventListener("click", validater);
             megaWin = true;
             jsConfetti.addConfetti({ //OKAY DONT KILL ME BUT THIS FUNCTION I FOUND ONLINE, I HAVE THE LINK RIGHT HERE AND YOUTUBE TUTORIAL FOR IT:  https://www.youtube.com/watch?v=tTIaA1Xmzmg&t=365s
                 confettiRadius: 6,
-                confettiNumber: 500,
+                confettiNumber: 300,
                 emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
             }); //this just customizes the confetti
             addwin(3);

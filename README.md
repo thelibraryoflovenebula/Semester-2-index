@@ -1,5 +1,7 @@
 <h1>Semester 2 index</h1>
-(https://thelibraryoflovenebula.github.io/Semester-2-index/)
+<a href="https://thelibraryoflovenebula.github.io/Semester-2-index/"> Github Pages </a>
+<a href="https://csunix.mohawkcollege.ca/~sa000964569/private/10259/index.html"> For CSUNIX</a>
+
 
 This is for me to keep up with, has my current semester workings, someone could probably dox the shit out of me if they scoured the internet long and hard enough... oh well
 

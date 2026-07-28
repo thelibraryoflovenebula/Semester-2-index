@@ -1,0 +1,196 @@
+/* CSS FILE DOCUMENTATION HEADER
+Name: Neil Patrick Olaires
+Course: COMP 10259
+Assignment: A4
+Date: July 16 2026
+*/
+
+body {
+    background-color: black;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+#skyWindow {
+    border-radius: 2em;
+    margin: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+#change {
+    font-size: 8em;
+}
+
+#cloudCount {
+    padding: 0;
+    margin: 0;
+    font-size: 10em;
+}
+
+
+
+.bruh {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#instructions {
+    border: 2px solid white;
+    margin: 0 20em 0 20em;
+    line-height: 5px;
+    border-radius: 1em;
+    background-color: rgb(41, 40, 39);
+}
+
+.butts {
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 1em;
+    background-color: beige;
+}
+
+#resetClick {
+    background-color: rgb(223, 203, 203);
+}
+
+
+#addClick {
+    background-color: #cbdcdf;
+}
+
+
+
+/*
+ANIMATION CLASSES
+*/
+
+.update {
+    color: white;
+}
+
+.superMode {
+    color: white;
+    animation: super 1s;
+}   
+
+/**
+THIS FUNCTION CYCLES SUPER MODE
+*/
+@keyframes super {
+    0% {
+        color: red;
+        border-color: red;
+    }
+
+    12.5% {
+        color: orange;
+        border-color: orange;
+    }
+
+    25% {
+        color: yellow;
+        border-color: yellow;
+    }
+
+    37.5% {
+        color: green;
+        border-color: green;
+    }
+    
+    50% {
+        color: blue;
+        border-color: blue;
+    }
+
+    62.5% {
+        color: rgb(160, 28, 255);
+        border-color: rgb(160, 28, 255);
+
+    }
+
+    75% {
+        color: violet;
+        border-color: violet;
+    }
+
+    87.5% {
+        color: pink;
+        border-color: pink
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+        border-color: white;
+    }
+
+
+
+}
+
+/*  THESE ARE THE STATES THAT CHANGES, I WANTED IT TO TRANSITION NICELY BUT APPARENTLY LINEAR GRADIENTS DONT ACTUALLY SMOOTHLY SWITCH*/
+
+.afternoonState {
+    background: #a3edf0;
+    background: linear-gradient(360deg, rgba(163, 237, 240, 1) 31%, rgba(138, 187, 230, 1) 99%);
+    animation: toAfternoon 1s;
+}
+@keyframes toAfternoon {
+    from {
+        background: #030026;
+        background: linear-gradient(180deg, rgba(3, 0, 38, 1) 0%, rgba(23, 23, 92, 1) 35%, rgba(75, 40, 120, 1) 100%);
+        filter: brightness(0.5);
+    }
+    to {
+        background: #a3edf0;
+        background: linear-gradient(360deg, rgba(163, 237, 240, 1) 31%, rgba(138, 187, 230, 1) 99%);
+        filter: brightness(1);
+    }
+}
+
+.eveningState {
+    background: #fff1ab;
+    background: linear-gradient(360deg,rgba(255, 241, 171, 1) 0%, rgba(219, 136, 136, 1) 50%, rgba(42, 31, 77, 1) 95%);
+    animation: toEvening 1s;
+}
+@keyframes toEvening {
+    from {
+        background: #a3edf0;
+        background: linear-gradient(360deg, rgba(163, 237, 240, 1) 31%, rgba(138, 187, 230, 1) 99%);
+        filter: brightness(0.5);
+    }
+    to {
+        background: #fff1ab;
+        background: linear-gradient(360deg,rgba(255, 241, 171, 1) 0%, rgba(219, 136, 136, 1) 50%, rgba(42, 31, 77, 1) 95%);
+        filter: brightness(1);
+    }
+}
+
+.nightState {
+    background: #030026;
+    background: linear-gradient(180deg, rgba(3, 0, 38, 1) 0%, rgba(23, 23, 92, 1) 35%, rgba(75, 40, 120, 1) 100%);
+    animation: toNight 1s;
+}
+@keyframes toNight {
+    from{
+        background: #fff1ab;
+        background: linear-gradient(360deg,rgba(255, 241, 171, 1) 0%, rgba(219, 136, 136, 1) 50%, rgba(42, 31, 77, 1) 95%);
+        filter: brightness(0.5);
+    }
+    to{
+        background: #030026;
+        background: linear-gradient(180deg, rgba(3, 0, 38, 1) 0%, rgba(23, 23, 92, 1) 35%, rgba(75, 40, 120, 1) 100%);
+        filter: brightness(1);
+    }
+}
